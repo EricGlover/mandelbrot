@@ -1,5 +1,8 @@
 package mandelbrot
 
+//things
+
+
 import (
 	"fmt"
 	"math"
@@ -31,8 +34,12 @@ func Img(canvasWidth int, canvasHeight int, planeCoordinates [4]float64, maxIter
       //convert pixels coords to complex plane coords
       c := complex((float64(x) * planeWidth / float64(canvasWidth) + left), (float64(y) * planeHeight / float64(canvasHeight) + bottom ))
       //check the setMembership
-      escape := escapeIteration(c, maxIterations)
-      pixels[x][y] = escape
+      // escape := escapeIteration(c, maxIterations)
+
+      escapeIteration(c, maxIterations)
+      // pixels[x][y] = escape
+      // fmt.Println(escape)
+      pixels[x][y] = 100
     }
   }
   return pixels
